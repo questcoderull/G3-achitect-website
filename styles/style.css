@@ -12,6 +12,9 @@
   display: flex;
 }
 
+.text-primary {
+  color: #ff900e;
+}
 /* dark 02 */
 .text-gray {
   color: #424242;
@@ -33,6 +36,18 @@
   font-weight: 600;
   border-radius: 8px;
   border: none;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background-color: #424242;
+}
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+main > section {
+  margin-top: 130px;
 }
 /* header styles */
 
@@ -76,10 +91,53 @@
   width: 100%;
 }
 
+/* teams and feature releted styles */
+.teams {
+  align-items: center;
+  /* gap: 3%; i used it , but jhonkar bhai made it in diffrent way , so i just followed him by using "our-features"class */
+}
+.team-image-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.our-features {
+  margin-left: 77px;
+  max-width: 530px;
+}
+
+.feature-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+#Quick-list {
+  font-weight: 500;
+}
 /* responsive media query */
 @media screen and (max-width: 576px) {
   .navbar,
-  .nav-links {
+  .nav-links,
+  .teams {
     flex-direction: column;
+  }
+  .team-image-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .our-features {
+    margin-left: 20px;
+    text-align: center;
+  }
+}
+
+/* mediam size device */
+@media screen and (min-width: 577px) and (max-width: 992px) {
+  .teams {
+    flex-direction: column;
+  }
+  .our-features {
+    margin: 0 auto;
+    text-align: center;
   }
 }
