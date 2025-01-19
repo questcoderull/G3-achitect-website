@@ -49,6 +49,11 @@ main {
 main > section {
   margin-top: 130px;
 }
+.section-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
 /* header styles */
 
 /* navbar releted styles */
@@ -107,13 +112,67 @@ main > section {
   max-width: 530px;
 }
 
-.feature-title {
-  font-size: 2.8rem;
-  font-weight: 700;
-}
 #Quick-list {
   font-weight: 500;
 }
+
+/* some facts reletedstyles */
+.facts-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.fact-description {
+  max-width: 540px;
+  margin-bottom: 100px;
+}
+.fact-card {
+  border: 1px solid #ff900e;
+  width: 240px;
+  height: 240px;
+  border-radius: 8px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.fact-card:hover {
+  background-color: #ff900e;
+  color: #fff;
+
+  .fact-icon {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+  }
+}
+.fact-number {
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.fact-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+/* sponsors releted styles */
+.sponsors-info {
+  max-width: 540px;
+  margin: 50px auto;
+  text-align: center;
+}
+.sponsors-companies {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.sponsors-companies img {
+  filter: grayscale(100%);
+}
+
 /* responsive media query */
 @media screen and (max-width: 576px) {
   .navbar,
@@ -121,10 +180,16 @@ main > section {
   .teams {
     flex-direction: column;
   }
-  .team-image-container {
+  .team-image-container,
+  .facts-container,
+  .sponsors-companies {
     grid-template-columns: repeat(1, 1fr);
   }
-
+  .facts-container,
+  .sponsors-companies {
+    justify-items: center;
+    gap: 24px;
+  }
   .our-features {
     margin-left: 20px;
     text-align: center;
@@ -139,5 +204,12 @@ main > section {
   .our-features {
     margin: 0 auto;
     text-align: center;
+  }
+
+  .facts-container,
+  .sponsors-companies {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 24px;
   }
 }
