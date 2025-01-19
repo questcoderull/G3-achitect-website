@@ -116,6 +116,44 @@ main > section {
   font-weight: 500;
 }
 
+/* feature section releted styles */
+.Features {
+  gap: 10%;
+}
+#feature-section-title {
+  border-left: 5px solid #ff900e;
+  padding-left: 20px;
+}
+.feature-card {
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
+  margin-bottom: 20px;
+}
+
+.feature-card:hover {
+  box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.1);
+}
+.feature-card .feature-title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+#exparience-badge {
+  padding: 45px 42px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-left: -100px;
+  margin-top: -100px;
+}
+#exparience-year {
+  font-size: 4rem;
+  font-weight: 700;
+}
+.feature-architect img {
+  width: 100%;
+}
 /* some facts reletedstyles */
 .facts-container {
   display: grid;
@@ -173,11 +211,25 @@ main > section {
   filter: grayscale(100%);
 }
 
+/* footer styles */
+footer {
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 200px;
+}
+.footer p {
+  padding: 40px;
+  background-color: rgba(255, 244, 231, 1);
+  text-align: center;
+}
+
 /* responsive media query */
 @media screen and (max-width: 576px) {
   .navbar,
   .nav-links,
-  .teams {
+  .teams,
+  .Features {
     flex-direction: column;
   }
   .team-image-container,
@@ -194,11 +246,23 @@ main > section {
     margin-left: 20px;
     text-align: center;
   }
+  /* #exparience-badge {
+    margin-top: 20px;
+    margin-left: 20px;
+  } it is jonkar bhai's style */
+
+  /* and this is mine */
+  #exparience-badge {
+    display: block;
+    margin: 20px auto;
+    width: 95%;
+  }
 }
 
 /* mediam size device */
 @media screen and (min-width: 577px) and (max-width: 992px) {
-  .teams {
+  .teams,
+  .Features {
     flex-direction: column;
   }
   .our-features {
@@ -211,5 +275,11 @@ main > section {
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     gap: 24px;
+  }
+  /* and this is also mine */
+  #exparience-badge {
+    display: block;
+    margin: 20px auto;
+    width: 95%;
   }
 }
